@@ -96,3 +96,4 @@ LOGLEVEL ([Aa]lert|ALERT|[Tt]race|TRACE|[Dd]ebug|DEBUG|[Nn]otice|NOTICE|[Ii]nfo?
 
 # Custom Pattners for Graylog by David00
 NEXUSTIMESTAMPTZ %{YEAR} %{MONTH} %{MONTHDAY} %{TIME} %{TZ}
+SYSLOG5424PRI <%{NONNEGINT:syslog5424_pri}>
