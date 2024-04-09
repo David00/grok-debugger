@@ -97,4 +97,7 @@ LOGLEVEL ([Aa]lert|ALERT|[Tt]race|TRACE|[Dd]ebug|DEBUG|[Nn]otice|NOTICE|[Ii]nfo?
 # Custom Pattners for Graylog by David00
 NEXUSTIMESTAMPTZ %{YEAR} %{MONTH} %{MONTHDAY} %{TIME} %{TZ}
 SYSLOG5424PRI <%{NONNEGINT:syslog5424_pri}>
+CISCOTIMESTAMP %{MONTH} +%{MONTHDAY}(?: %{YEAR})? %{TIME}
+CISCOTIMESTAMPTZ %{CISCOTIMESTAMP}( %{TZ})?
 CISCOTIMESTAMPTZ_SINGLE_DAY %{MONTH}  %{MONTHDAY} %{YEAR} %{TIME} %{TZ}
+CISCO_REASON Duplicate TCP SYN|Failed to locate egress interface|Invalid transport field|No matching connection|DNS Response|DNS Query|(?:%{WORD}\s*)
